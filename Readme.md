@@ -10,7 +10,7 @@
 
 This example demonstrates how to use the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) to edit an in-memory data set with a master-detail relationship.
 
-![How to Edit an In-Memory Dataset](edit-in-memory-dataset.png)
+![How to Edit an In-Memory Data Set](edit-in-memory-dataset.png)
 
 ## Implementation Details 
 
