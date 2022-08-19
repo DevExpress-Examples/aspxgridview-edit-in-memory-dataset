@@ -1,20 +1,12 @@
-using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using DevExpress.Web;
+using System;
 using System.Collections;
+using System.Data;
+using System.Web.UI;
 
-public partial class _Default : System.Web.UI.Page 
-{
+public partial class _Default : System.Web.UI.Page {
     DataSet ds = null;
-	protected void Page_Init(object sender, EventArgs e)
-    {
+	protected void Page_Init(object sender, EventArgs e) {
 		if (!IsPostBack || (Session["DataSet"] == null)) {
             ds = new DataSet();
             DataTable masterTable = new DataTable();
@@ -28,9 +20,9 @@ public partial class _Default : System.Web.UI.Page
             detailTable.Columns.Add("Data", typeof(string));
             detailTable.PrimaryKey = new DataColumn[] { detailTable.Columns["ID"] };
             int index = 0;
-            for(int i = 0;i < 20;i++) {
+            for(int i = 0; i < 20; i++) {
                 masterTable.Rows.Add(new object[] { i, "Master Row " + i });
-                for(int j = 0;j < 5;j++)
+                for(int j = 0; j < 5; j++)
                     detailTable.Rows.Add(new object[] { index++, i, "Detail Row " + j });
             }
             ds.Tables.AddRange(new DataTable[] { masterTable, detailTable });
@@ -38,10 +30,10 @@ public partial class _Default : System.Web.UI.Page
         }
         else
             ds = (DataSet)Session["DataSet"];
-        ASPxGridView1.DataSource = ds.Tables[0];
-        ASPxGridView1.DataBind();
+        MasterGridView.DataSource = ds.Tables[0];
+        MasterGridView.DataBind();
     }
-    protected void ASPxGridView2_BeforePerformDataSelect(object sender, EventArgs e) {
+    protected void DetailGridView_BeforePerformDataSelect(object sender, EventArgs e) {
         ds = (DataSet)Session["DataSet"];
         DataTable detailTable = ds.Tables[1];
         DataView dv = new DataView(detailTable);
@@ -49,7 +41,7 @@ public partial class _Default : System.Web.UI.Page
         dv.RowFilter = "MasterID = " + detailGridView.GetMasterRowKeyValue();
         detailGridView.DataSource = dv;
     }
-    protected void ASPxGridView1_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e) {
+    protected void MasterGridView_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e) {
         ds = (DataSet)Session["DataSet"];
         ASPxGridView gridView = (ASPxGridView)sender;
         DataTable dataTable = gridView.GetMasterRowKeyValue() != null ? ds.Tables[1] : ds.Tables[0];
@@ -61,7 +53,7 @@ public partial class _Default : System.Web.UI.Page
         gridView.CancelEdit();
         e.Cancel = true;
     }
-    protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e) {
+    protected void MasterGridView_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e) {
         ds = (DataSet)Session["DataSet"];
         ASPxGridView gridView = (ASPxGridView)sender;
 		DataTable dataTable = gridView.GetMasterRowKeyValue() != null ? ds.Tables[1] : ds.Tables[0];
@@ -77,14 +69,14 @@ public partial class _Default : System.Web.UI.Page
         dataTable.Rows.Add(row);
     }
 
-    protected void ASPxGridView1_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e) {
-        int i = ASPxGridView1.FindVisibleIndexByKeyValue(e.Keys[ASPxGridView1.KeyFieldName]);
-        Control c = ASPxGridView1.FindDetailRowTemplateControl(i, "ASPxGridView2");
+    protected void MasterGridView_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e) {
+        int i = MasterGridView.FindVisibleIndexByKeyValue(e.Keys[MasterGridView.KeyFieldName]);
+        Control c = MasterGridView.FindDetailRowTemplateControl(i, "ASPxGridView2");
         e.Cancel = true;
         ds = (DataSet)Session["DataSet"];
-        ds.Tables[0].Rows.Remove(ds.Tables[0].Rows.Find(e.Keys[ASPxGridView1.KeyFieldName]));
-   
+        ds.Tables[0].Rows.Remove(ds.Tables[0].Rows.Find(e.Keys[MasterGridView.KeyFieldName]));
     }
+
     private int GetNewId() {
         ds = (DataSet)Session["DataSet"];
         DataTable table= ds.Tables[0];
