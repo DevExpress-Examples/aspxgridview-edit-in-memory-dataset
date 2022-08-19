@@ -3,12 +3,12 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E257)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Grid View for ASP.NET Web Forms - How to edit an in-memory dataset with a master-detail relationship
+# Grid View for ASP.NET Web Forms - How to edit an in-memory data set with a master-detail relationship
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/128530956/)**
 <!-- run online end -->
 
-This example demonstrates how to use the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) to edit an in-memory dataset with a master-detail relationship.
+This example demonstrates how to use the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) to edit an in-memory data set with a master-detail relationship.
 
 ![How to Edit an In-Memory Dataset](edit-in-memory-dataset.png)
 
