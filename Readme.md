@@ -33,6 +33,6 @@ To implement the CRUD operations required to edit the grid's data, handle the fo
 - [Troubleshooting: Why the 'Specified method is not supported' and 'Updating is not supported by data source 'X' unless UpdateCommand is specified' errors occur](https://docs.devexpress.com/AspNet/403771/troubleshooting/grid-related-issues/crud-operations-with-custom-data-source)
 
 ## More Examples
-- [Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in batch edit mode](aspxgridview-prevent-batch-edit-action)
+- [Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in batch edit mode](https://github.com/DevExpress-Examples/aspxgridview-prevent-batch-edit-action)
 - [Grid View for ASP.NET Web Forms - A simple batch editing implementation](https://github.com/DevExpress-Examples/aspxgridview-simple-batch-editing-implementation)
 - [Grid View for ASP.NET Web Forms - How to edit a DataTable stored in ViewState at runtime](https://github.com/DevExpress-Examples/how-to-edit-data-in-a-datatable-using-aspxgridview-at-runtime-when-data-is-stored-in-viewsta-e2945)
