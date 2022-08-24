@@ -14,7 +14,7 @@ This example demonstrates how to use the [ASPxGridView](https://docs.devexpress.
 
 ## Implementation Details 
 
-The example application stores data in a [`DataSet`](https://docs.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-6.0) object created at runtime. The `DataSet` object contains master and detail data tables.
+The example application stores data in a [DataSet](https://docs.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-6.0) object created at runtime. The `DataSet` object contains master and detail data tables.
 
 To implement the CRUD operations required to edit the grid's data, handle the following events:
 
