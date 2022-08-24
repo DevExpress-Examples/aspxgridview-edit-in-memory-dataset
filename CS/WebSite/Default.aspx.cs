@@ -4,7 +4,7 @@ using System.Collections;
 using System.Data;
 using System.Web.UI;
 
-public partial class _Default : System.Web.UI.Page {
+public partial class _Default : System.Web.UI.Page { 
     DataSet ds = null;
 	protected void Page_Init(object sender, EventArgs e) {
 		if (!IsPostBack || (Session["DataSet"] == null)) {
