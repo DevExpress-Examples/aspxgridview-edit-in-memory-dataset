@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApp.Default" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <dx:ASPxGridView ID="MasterGridView" runat="server" AutoGenerateColumns="False"
+            <dx:ASPxGridView ID="MasterGridView" runat="server" AutoGenerateColumns="False" SettingsPager-PageSize="3"
                 KeyFieldName="ID" OnRowUpdating="MasterGridView_RowUpdating" Width="588px" OnRowDeleting="MasterGridView_RowDeleting" OnRowInserting="MasterGridView_RowInserting">
                 <Columns>
                     <dx:GridViewCommandColumn VisibleIndex="0" ShowEditButton="True" ShowDeleteButton="True" ShowNewButton="True" />
@@ -21,7 +21,7 @@
                 <SettingsDetail ShowDetailRow="True" />
                 <Templates>
                     <DetailRow>
-                        <dx:ASPxGridView ID="DetailGridView" runat="server" AutoGenerateColumns="False"
+                        <dx:ASPxGridView ID="DetailGridView" runat="server" AutoGenerateColumns="False" SettingsPager-PageSize="4"
                             KeyFieldName="ID" OnBeforePerformDataSelect="DetailGridView_BeforePerformDataSelect"
                             OnRowUpdating="MasterGridView_RowUpdating" Width="100%">
                             <Columns>
