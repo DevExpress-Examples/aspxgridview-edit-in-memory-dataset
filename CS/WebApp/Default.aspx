@@ -12,11 +12,9 @@
             <dx:ASPxGridView ID="MasterGridView" runat="server" AutoGenerateColumns="False" SettingsPager-PageSize="3"
                 KeyFieldName="ID" OnRowUpdating="MasterGridView_RowUpdating" Width="588px" OnRowDeleting="MasterGridView_RowDeleting" OnRowInserting="MasterGridView_RowInserting">
                 <Columns>
-                    <dx:GridViewCommandColumn VisibleIndex="0" ShowEditButton="True" ShowDeleteButton="True" ShowNewButton="True" />
-                    <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="True" VisibleIndex="1">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="Data" VisibleIndex="2">
-                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewCommandColumn ShowEditButton="True" ShowDeleteButton="True" ShowNewButton="True" />
+                    <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="True" />
+                    <dx:GridViewDataTextColumn FieldName="Data" />
                 </Columns>
                 <SettingsDetail ShowDetailRow="True" />
                 <Templates>
@@ -25,13 +23,10 @@
                             KeyFieldName="ID" OnBeforePerformDataSelect="DetailGridView_BeforePerformDataSelect"
                             OnRowUpdating="MasterGridView_RowUpdating" Width="100%">
                             <Columns>
-                                <dx:GridViewCommandColumn VisibleIndex="0" ShowEditButton="True" />
-                                <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="True" VisibleIndex="1">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="MasterID" ReadOnly="True" VisibleIndex="2">
-                                </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="Data" VisibleIndex="3">
-                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewCommandColumn ShowEditButton="True" />
+                                <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="True" />
+                                <dx:GridViewDataTextColumn FieldName="MasterID" ReadOnly="True" />
+                                <dx:GridViewDataTextColumn FieldName="Data" />
                             </Columns>
                         </dx:ASPxGridView>
                     </DetailRow>
