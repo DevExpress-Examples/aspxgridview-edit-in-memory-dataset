@@ -35,7 +35,7 @@ To implement the CRUD operations required to edit the grid's data, handle the fo
 - [Grid View for ASP.NET Web Forms - A simple batch editing implementation](https://github.com/DevExpress-Examples/aspxgridview-simple-batch-editing-implementation)
 - [Grid View for ASP.NET Web Forms - How to edit a DataTable stored in ViewState at runtime](https://github.com/DevExpress-Examples/how-to-edit-data-in-a-datatable-using-aspxgridview-at-runtime-when-data-is-stored-in-viewsta-e2945)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=aspxgridview-edit-in-memory-dataset&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=aspxgridview-edit-in-memory-dataset&~~~was_helpful=no)
 
